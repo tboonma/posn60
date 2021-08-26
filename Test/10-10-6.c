@@ -1,0 +1,55 @@
+#include <stdio.h>
+main()
+{
+    int x,i,d,j,max=-9999,max2=-9999,max3=-9999;
+    scanf("%d",&x);
+    int a[x];
+    d=x*27/100;
+    if((x*27)%100>=50)
+        d++;
+    int b[d];
+    for(i=0;i<x;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<x;i++)
+    {
+        if(b[i]<a[i])
+            b[i]=a[i];
+    }
+    for(i=0;i<x;i++)
+    {
+        if(a[i]==max)
+        {
+            a[i]=0;
+            break;
+        }
+    }
+    for(i=0;i<x;i++)
+    {
+        if(max2<a[i])
+            max2=a[i];
+    }
+    for(i=0;i<x;i++)
+    {
+        if(a[i]==max2)
+        {
+            a[i]=0;
+            break;
+        }
+    }
+    for(i=0;i<x;i++)
+    {
+        if(max3<a[i])
+            max3=a[i];
+    }
+    for(i=0;i<x;i++)
+    {
+        if(a[i]==max3)
+        {
+            a[i]=0;
+            break;
+        }
+    }
+    printf("|%d|%d|%d|",max,max2,max3);
+}
